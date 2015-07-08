@@ -1,0 +1,23 @@
+{
+  "name": "shorten.js",
+  "version": "0.0.1",
+  "homepage": "git@github.com:shorten/shorten.js.git",
+  "authors": [
+    "Pierre Reimertz <pierre@pierrereimertz.com>"
+  ],
+  "main": "dist/latest/shortest.min.js",
+  "license": "MIT",
+  "ignore": [
+    ".build",
+    "gulptasks",
+    "src",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "hashids": "~1.0.2"
+  }
+}
