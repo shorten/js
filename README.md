@@ -3,8 +3,7 @@ shorten.js
 
 ## Installation
 
-Shorten is a free url-shortener extending githubs internal url-shortener with more features, like
-adding the ability to shorten urls outside of githubs own domain.
+Shorten is a free url-shortener extending githubs internal url-shortener with the ability to shorten urls outside of githubs own domain.
 
 ```html
 <head>
