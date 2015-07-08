@@ -7,7 +7,7 @@ Shorten is a free url-shortener extending githubs internal url-shortener with th
 
 ```html
 <head>
-  <script type="text/javascript" src="https://cdn.rawgit.com/shorten/js/master/dist/0.0.1/shorten.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/shorten/js/master/dist/0.0.2/shorten.js"></script>
 </head>
 
 
