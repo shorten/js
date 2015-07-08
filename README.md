@@ -8,22 +8,20 @@ adding the ability to shorten urls outside of githubs own domain.
 
 ```html
 <head>
-  <script type="text/javascript" src="//shorten.github.io/js/dist/latest/shorten.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/shorten/js/master/dist/0.0.1/shorten.js"></script>
 </head>
 
+
 ```
-
 ##Usage
-
-
 ```javascript
 shorten.url('http://google.com?q=1337', function(err, shortenUrl){
   if(err){
-    return (':(');
+    return;
   }
 
-  console.log(shortUrl);
-  //http://git.io/LpZkPvEEv
+  console.log(shortenUrl);
+  // http://git.io/LpZkPvEEv
 });
 ```
 
