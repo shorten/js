@@ -26,7 +26,7 @@
 
     var hashString = generateHash();
 
-    form[0].value = 'https://shorten.github.io/r?u=' + url + '&_sid=' + hashString;
+    form[0].value = 'https:/s10.li/r?u=' + url + '&_sid=' + hashString;
     form[1].value = hashString;
 
     form.submit();
