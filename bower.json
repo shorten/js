@@ -1,7 +1,8 @@
 {
   "name": "shorten",
-  "description": "A free url-shortener extending git.io",
   "version": "0.0.2",
+  "main": "dist/0.0.2/shorten.min.js",
+  "description": "A free url-shortener extending git.io",
   "homepage": "shorten.li/js",
   "keywords": [
     "shorten",
@@ -13,7 +14,6 @@
   "authors": [
     "Pierre Reimertz <pierrereimertz@gmail.com>"
   ],
-  "main": "dist/0.0.2/shortest.min.js",
   "license": "MIT",
   "ignore": [
     ".build",
