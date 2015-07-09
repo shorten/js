@@ -1,11 +1,19 @@
 {
-  "name": "shorten.js",
+  "name": "shorten",
+  "description": "A free url-shortener extending git.io",
   "version": "0.0.2",
-  "homepage": "git@github.com:shorten/shorten.js.git",
-  "authors": [
-    "Pierre Reimertz <pierre@pierrereimertz.com>"
+  "homepage": "shorten.li/js",
+  "keywords": [
+    "shorten",
+    "url-shortener",
+    "url",
+    "shortener",
+    "free"
   ],
-  "main": "dist/latest/shortest.min.js",
+  "authors": [
+    "Pierre Reimertz <pierrereimertz@gmail.com>"
+  ],
+  "main": "dist/0.0.2/shortest.min.js",
   "license": "MIT",
   "ignore": [
     ".build",
@@ -17,7 +25,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
+  "devDependencies": {
     "hashids": "~1.0.2"
   }
 }
