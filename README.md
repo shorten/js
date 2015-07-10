@@ -12,7 +12,7 @@ bower install shorten --save
 
 ###cdn
 ```html
-  <script type="text/javascript" src="https://cdn.rawgit.com/shorten/js/master/dist/0.0.4/shorten.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/shorten/js/master/dist/0.1.0/shorten.js"></script>
 
 ```
 ##Usage

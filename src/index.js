@@ -26,11 +26,11 @@
 
     var hashString = generateHash();
 
-    form[0].value = 'https://shorten.github.io/r?u=' + url + '&_sid=' + hashString;
+    form[0].value = 'https://s10.li/r?u=' + url + '&_sid=' + hashString;
     form[1].value = hashString;
 
     form.submit();
-    return callback(null, 'http://git.io/' + hashString);
+    return callback(null, 'http://s10.li/' + hashString);
   };
 
   function generateHash(){
