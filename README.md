@@ -1,26 +1,32 @@
 shorten.js
 ================
 
-## Installation
-
 Shorten is a free url-shortener extending githubs internal url-shortener with the ability to shorten urls outside of githubs own domain.
 
-```html
-<head>
-  <script type="text/javascript" src="https://cdn.rawgit.com/shorten/js/master/dist/0.0.2/shorten.js"></script>
-</head>
+## Installation
 
+###bower
+```bash
+bower install shorten --save
+```
+
+###cdn
+```html
+  <script type="text/javascript" src="https://cdn.rawgit.com/shorten/js/master/dist/0.0.2/shorten.js"></script>
 
 ```
 ##Usage
+
+
 ```javascript
-shorten.url('http://google.com?q=1337', function(err, shortenUrl){
+var longUrl = 'http://news.ycombinator.com';
+
+shorten.url(longUrl, function(err, shortenUrl){
   if(err){
-    return;
+    //handle error
   }
 
   console.log(shortenUrl);
-  // http://git.io/LpZkPvEEv
 });
 ```
 
