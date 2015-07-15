@@ -1,8 +1,8 @@
 {
   "name": "shorten-js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A free url-shortener",
-  "main": "dist/0.2.1/shorten.min.js",
+  "main": "dist/0.2.2/shorten.min.js",
   "scripts": {
     "test": "node_modules/.bin/mocha -w"
   },

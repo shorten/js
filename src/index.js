@@ -72,7 +72,7 @@
   function injectIframe() {
     iframe = document.createElement('iframe');
     iframe.setAttribute('name', 'shorten-iframe');
-    iframe.setAttribute('src', 'http://git.io');
+    iframe.setAttribute('src', '//git.io');
     iframe.style.cssText = 'display:none;';
 
     body.appendChild(iframe);
@@ -81,7 +81,7 @@
   function injectForm() {
     form = document.createElement('form');
     form.setAttribute('id', 'shorten-form');
-    form.setAttribute('action', 'http://git.io');
+    form.setAttribute('action', '//git.io');
     form.setAttribute('method', 'POST');
     form.setAttribute('enctype', 'multipart/form-data');
     form.setAttribute('target', 'shorten-iframe');
