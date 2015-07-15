@@ -1,7 +1,7 @@
 {
   "name": "shorten",
-  "version": "0.2.0",
-  "main": "dist/0.2.0/shorten.min.js",
+  "version": "0.2.1",
+  "main": "dist/0.2.1/shorten.min.js",
   "description": "A free url-shortener extending git.io",
   "homepage": "shorten.li/js",
   "keywords": [

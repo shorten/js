@@ -17,10 +17,10 @@
       ipNumberAsInt, epochDiff;
 
   function shortenUrl(url, callback, retries){
-    if(retries && retries > 3) return callback(new Error('Error retrieving your ip-number or ms since epoch. :('), null);
+    if(retries && retries > 10) return callback(new Error('Error retrieving your ip-number or ms since epoch. :('), null);
 
-    if(!ipNumberAsInt) return setTimeout(function(){ shortenUrl(url, callback, retries++ || 0); }, 200);
-    if(!epochDiff) return setTimeout(function(){ shortenUrl(url, callback, retries++ || 0); }, 200);
+    if(!ipNumberAsInt) return setTimeout(function(){ shortenUrl(url, callback, retries++ || 0); }, 500);
+    if(!epochDiff) return setTimeout(function(){ shortenUrl(url, callback, retries++ || 0); }, 500);
 
     if(!regex.test(url)) return callback(new Error('Malformed url..'), null);
 
@@ -30,7 +30,7 @@
     form[1].value = hashString;
 
     form.submit();
-    return callback(null, 'http://s10.li/' + hashString);
+    return callback(null, 'https://s10.li/' + hashString);
   };
 
   function generateHash(){
@@ -41,24 +41,20 @@
     return hashids.encode(uniqueId);
   }
 
-  function fetchTime() {
-    timeRequest.open('GET', 'http://currentmillis.com/api/millis-since-unix-epoch.php', true);
+  function gotTime(json){
+    epochDiff = parseInt(json.dateString) - Date.now();
+  }
 
-    timeRequest.onload = function() {
-      if (timeRequest.status >= 200 && timeRequest.status < 400) {
-        epochDiff = parseInt(timeRequest.responseText) - Date.now();
-      }
-    };
+  function injectTimeScript() {
+    var timeScript = document.createElement('script');
+        timeScript.setAttribute('type', 'text/javascript');
+        timeScript.setAttribute('src', '//timeapi.herokuapp.com/utc/now.json?format=\\Q&callback=shortenGotTime');
 
-    timeRequest.onerror = function() {
-      // ;-;
-    };
-
-    timeRequest.send();
+        body.appendChild(timeScript);
   }
 
   function fetchIpNumber(){
-    ipRequest.open('GET', 'https://api.ipify.org', true);
+    ipRequest.open('GET', '//api.ipify.org', true);
 
     ipRequest.onload = function() {
       if (ipRequest.status >= 200 && ipRequest.status < 400) {
@@ -105,10 +101,11 @@
   }
 
   function init(){
+    injectTimeScript();
     injectForm();
     injectIframe();
+
     fetchIpNumber();
-    fetchTime();
   }
 
   var shorten = {
@@ -118,6 +115,8 @@
   }
 
   init();
+
   exports.shorten = shorten;
+  exports.shortenGotTime = gotTime;
 
 })(window, document.getElementsByTagName('body')[0]);
